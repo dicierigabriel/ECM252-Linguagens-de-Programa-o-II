@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+h1 {
+    color:#004684;
+    text-align: center;
+    }
+.sobre{
+    text-align: center;
+    padding: 100px 500px 100px 500px;
+    background-color: #004684;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: large;
+    color: azure;
+}
+.logo-maua{
+    padding: 0px 0px 10px 800px;
+}
+.oferecer{
+    
+    padding: 10px 500px 10px 500px;
+    font-size: large;
+}
+.oferecer p{
+    text-align: center;
+}
+.oferecer h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.video{
+    padding: 10px 0px 10px 600px;
+}
+footer{
+    background-color: #004684;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: azure;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
