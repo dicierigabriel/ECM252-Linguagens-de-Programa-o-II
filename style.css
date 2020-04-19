@@ -1,44 +1,87 @@
-* {
+body{
     margin: 0;
     padding: 0;
+    width: 100% !important;
   }
-h1 {
+
+img{
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+h1{
     color:#004684;
     text-align: center;
     }
+    
 .sobre{
     text-align: center;
-    padding: 100px 500px 100px 500px;
-    background-color: #004684;
-    background-size: cover;
-    background-attachment: fixed;
-    font-size: large;
     color: azure;
+    background-color: #004684;
+    padding: 3px;
 }
-.logo-maua{
-    padding: 0px 0px 10px 800px;
+
+h2{
+    color:#004684;
+    text-align: center;
 }
-.oferecer{
-    
-    padding: 10px 500px 10px 500px;
-    font-size: large;
-}
+
 .oferecer p{
     text-align: center;
+    padding: 3px;
 }
-.oferecer h2{
+
+.iframe-container{
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;  
+  }
+   
+.iframe-container iframe{
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; 
+  }
+   
+footer p{
+    margin-bottom: 0px;
     text-align: center;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    color: azure;
 }
-.video{
-    padding: 10px 0px 10px 600px;
+
+footer p a{
+    color: azure;
 }
+
 footer{
     background-color: #004684;
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
-    color: azure;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    height: 40px;   
+}
+
+@media(max-width: 900px){
+    img{
+        max-width: 250px;
+    } 
+    /* h1{
+        font-size: 8.5vh;
+    } */
+}
+@media(max-width: 550px){
+    img{
+        max-width: 200px;
+    } 
+    h1{
+        font-size: 5.5vh;
+    } 
 }
