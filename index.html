@@ -1,303 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="https://maua.br/img/favicon.ico">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <title>Instituto Mauá de Tecnologia</title>
-  </head>
 
-  <body>
-    <!-- Menu de navegação -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark fixed-top"
-      style="background-color: #00293f;"
-    >
-      <a class="navbar-brand"
-        ><img
-          src="https://maua.br/img/default/logo_maua.png"
-          height="35"
-          alt=""
-      /></a>
-      <button
-        class="navbar-toggler"
-        style="background-color:#00293f; border-color: white;"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto" style="color: white;">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="professores.html">Professores</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="sugestoes.html">Sugestões</a></li>
-        </ul>
-        <form action="" class="form-inline">
-          <input type="text" class="form-control mr-2" placeholder="Login" />
-          <input
-            type="password"
-            class="form-control mr-2"
-            placeholder="Senha"
-          />
-          <button 
-          class="btn btn-primary"
-          style="background-color: #00293f; border-color: white;"
-          >Entrar</button>
-        </form>
-      </div>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- Cards de informação -->
+<body>
     <div class="container">
-      <div class="row">
-        <div class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/administracao-14102942.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Administração</h5>
-              <p class="card-text">
-                Se você pensa em ser um administrador de empresas, quer fundar
-                sua própria empresa e ser um empreendedor, ou mesmo liderar
-                equipes de ponta em uma grande corporação, o começo da sua
-                trajetória passa pela Mauá.
-              </p>
+        <div class="jogadores">
+            <div class="jogador0">
+                <p class="nome-jogador">Jogador 1</p>
+                <div class="pontuacao-global" id="pontuacao-global-0"></div>
+                <div class="caixa-pontuacao-rodada-0">
+                    <p>Pontuação da rodada</p>
+                    <div class="pontuacao-rodada-0" id="pontuacao-rodada-0">
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/design-14102950.png"
-              alt="Imagem
-aleatória"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Design</h5>
-              <p class="card-text">
-                O curso de Design da Mauá, oferecido desde 2007, possui nota
-                máxima no MEC, tem conquistado seu espaço no mundo acadêmico e
-                já deixa sua marca de qualidade no mercado.
-              </p>
+            <div class="jogador1">
+                <p class="nome-jogador">Jogador 2</p>
+                <div class="pontuacao-global" id="pontuacao-global-1"></div>
+                <div class="caixa-pontuacao-rodada-1">
+                    <p>Pontuação da rodada</p>
+                    <div class="pontuacao-rodada-1" id="pontuacao-rodada-1">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3 mt-xl-0"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-alimentos-14103003.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia de Alimentos</h5>
-              <p class="card-text">
-                Quer um curso de Engenharia de Alimentos que te ensina o
-                conteúdo na prática durante toda a graduação? A Mauá oferece a
-                melhor infraestrutura para você.
-              </p>
-            </div>
-          </div>
+        <div class="botoes">
+            <button class="botao lancar-dado" id="botao-lancar-dado">
+                Lançar Dado
+            </button>
+            <button class=" botao passar-vez" id="botao-passar-vez">
+                Passar vez
+            </button>
+            <button class=" botao novo-jogo" id="botao-novo-jogo">Novo jogo</button>
         </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-civil-14103012.png"
-              alt="Imagem
-  aleatória"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia Civil</h5>
-              <p class="card-text">
-                Quer fazer diferença no mercado e na sociedade sendo formado em
-                Engenharia Civil? Conheça o curso da Mauá!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-computacao-14103023.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia de Computação</h5>
-              <p class="card-text">
-                A Engenharia de Computação está presente em nosso dia a dia e
-                nas mais diversas áreas: Educação, Indústrias, Redes de
-                Comunicação e Dispositivos Móveis, Transportes, Entreterimento,
-                entre outras.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-controle-automacao-14103035.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia de Controle e Automação</h5>
-              <p class="card-text">
-                Você está procurando uma graduação em Engenharia de Controle e
-                Automação que o destaque no mercado de trabalho. Conheça o curso
-                oferecido pela Mauá!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-eletrica-14103052.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia Elétrica</h5>
-              <p class="card-text">
-                A Engenharia Elétrica está no nosso cotidiano, presente nas
-                diversas áreas industriais, em Sistemas de Transporte, na
-                Automação de instalações elétricas prediais e comerciais, entre
-                outras.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-eletronica-14103106.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia Eletrônica</h5>
-              <p class="card-text">
-                A Engenharia Eletrônica está em nosso cotidiano, presente nas
-                mais diversas áreas: Comunicação, Transporte, Sistemas
-                Computadorizados, Controle de Processos, Entretenimento,
-                Segurança, Automação Predial e Industrial, Indústria de
-                Eletrodomésticos e Equipamentos Médicos, entre muitas outras.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/102018/engenharia-mecanica-18154700.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia Mecânica</h5>
-              <p class="card-text">
-                A graduação em Engenharia Mecânica é uma das mais abrangentes
-                modalidades da Engenharia. Ela trata de tudo o que se move, de
-                brinquedos a fábricas (com tudo o que está dentro), passando por
-                eletrodomésticos, embarcações, veículos etc.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3 mb-xl-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/102018/engenharia-producao-18154849.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia de Produção</h5>
-              <p class="card-text">
-                Infraestrutura de ponta, profissionais reconhecidos num curso
-                bem-conceituado. Essa é a graduação em Engenharia de Produção da
-                Mauá, ideal para um futuro de sucesso!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-xl-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-3 mb-3"
-        >
-          <div class="card" style="width: 30rem;">
-            <img
-              src="https://maua.br/img/upload/092018/engenharia-quimica-14103146.png"
-              alt="Administração"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Engenharia Química</h5>
-              <p class="card-text">
-                Essa é a área mais abrangente da Engenharia e compreende todas
-                as etapas de criação, desenvolvimento, melhoramento e aplicação
-                dos processos químicos e bioquímicos e dos seus produtos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+    <script src="app.js"></script>
+</body>
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
