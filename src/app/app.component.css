@@ -1,0 +1,23 @@
+
+  .navbar.navbar-expand-lg.navbar-dark.fixed-top li a {
+      color: white;
+      font-weight: bold;
+      transition: 200ms !important;
+  }
+  .navbar.navbar-expand-lg.navbar-dark.fixed-top li a:hover {
+      transform: scale(1.08);
+  }
+  
+  form .container .form-group label{
+      color:#00293f;
+  
+  }
+  @media(max-width: 960px){
+      .navbar.navbar-expand-lg.navbar-dark.fixed-top li a {
+          color: white;
+          transition: 200ms !important;
+      }
+      .navbar.navbar-expand-lg.navbar-dark.fixed-top li a:hover {
+          transform: scale(1.008);
+      }
+    }
